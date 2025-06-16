@@ -1,123 +1,117 @@
 # 🍔 Cheeseburger vs. Nyan Cats - C++ Console Game
-This is a C++ console-based arcade game where the player, represented by a Cheeseburger 🍔, must dodge falling Nyan Cats 🐱, collect Power-ups ⚡, and get support from Friends 🧑‍🤝‍🧑 to survive and score high! The game emphasizes core Object-Oriented Programming (OOP) principles such as inheritance, polymorphism, and encapsulation.
+This is a C++ console-based arcade game where the player, represented by a Cheeseburger, must dodge falling Nyan Cats, collect Power-ups, and get help from Friends to survive and score high. The game demonstrates strong Object-Oriented Programming (OOP) principles, including inheritance, polymorphism, and encapsulation.
 
-🎯 Core Features
-1. 👤 Player (Cheeseburger)
-Moves left ⬅️ and right ➡️ to avoid Nyan Cats.
+Core Features
+1. Player (Cheeseburger) 👤
+Moves left and right to avoid Nyan Cats.
 
-Gains points by:
+Gains points by collecting power-ups and interacting with friends.
 
-Collecting power-ups ⚡
+Can activate abilities like:
 
-Interacting with friends 🧑‍🤝‍🧑
+Shield (temporary invincibility)
 
-Abilities include:
+Speed boost
 
-🛡️ Shield activation
+Score multiplier
 
-💨 Speed boost
+Loses lives when colliding with Nyan Cats unless shielded.
 
-✨ Score multiplier
+2. Nyan Cats 🐱‍👓
+Fall from random positions at variable speeds.
 
-Loses lives on collision with Nyan Cats unless shielded.
+Reset position upon collision or reaching the bottom of the screen.
 
-2. 🐱 Nyan Cats
-Fall from random positions at varying speeds depending on difficulty.
+Become faster as levels increase.
 
-Reset to the top after collisions or exiting the screen.
+3. Power-ups ⚡
+Appear randomly on the screen.
 
-Become faster and more frequent as the game progresses.
+Provide temporary benefits:
 
-3. ⚡ Power-Ups
-Spawn randomly with special abilities:
+Shield
 
-🛡️ Shield – temporarily protects the player.
+Speed Boost
 
-🚀 Speed Boost – increases movement speed.
+Score Multiplier
 
-💎 Score Multiplier – boosts points earned.
+4. Friends
+Friendly characters that provide support (e.g., increase player lives).
 
-4. 🧑‍🤝‍🧑 Friends
-Friendly game objects that assist the player:
+Have different support levels affecting the amount of help provided.
 
-Provide extra lives ❤️
+5. Levels and Difficulty
+Difficulty increases based on score milestones (e.g., every 100 points).
 
-Help based on varying support levels.
+Introduces faster Nyan Cats and more frequent obstacles.
 
-5. 📈 Levels & Difficulty
-Game difficulty increases with score milestones (e.g., +100 pts).
+6. Game Mechanics
+Implements collision detection between objects.
 
-Nyan Cats fall faster and more frequently at higher levels.
+Pause/Resume functionality via keyboard.
 
-6. ⚙️ Game Mechanics
-Collision detection handles object interactions.
-
-⏸️ Pause/Resume functionality via keyboard input.
-
-🧭 Menu System:
+Includes a basic menu:
 
 Start Game
 
 View High Scores
 
-Read Instructions
+Instructions
 
-See Team Credits
+Team Credits
 
-7. 🖼️ Graphics
-ASCII symbols represent all game objects:
+7. Graphics
+Uses ASCII characters to represent:
 
-B for Cheeseburger
+Cheeseburger (B)
 
-N for Nyan Cats
+Nyan Cats (N)
 
-F for Friends
+Friends (F)
 
-🎨 Color-coded text enhances visual clarity.
+Color-coded text enhances visibility and gameplay experience.
 
-8. 💾 Game State Management
-Tracks:
+8. Game State Management
+Tracks and manages:
 
-Player lives ❤️
+Player lives
 
-Current score 🏆
+Score
 
-Active level 📊
+Current level
 
-Allows replay by resetting the state after Game Over.
+Supports full reset after Game Over for replayability.
 
-🧱 Key Classes (OOP Structure)
-🧩 GameObject (Abstract Base Class)
+Key Classes (OOP Design)
+GameObject (Abstract Base Class)
 
-Common attributes: position, size
+Contains position, size, and collision logic.
 
-Handles basic collision detection
+Cheeseburger (Player)
 
-🍔 Cheeseburger (Player)
+Manages input, score, lives, and power-up effects.
 
-Manages movement, score, lives, and active power-ups
+NyanCat (Enemy)
 
-🌈 NyanCat (Enemy)
+Falls from the top and challenges the player.
 
-Falls vertically with speed variation
+Powerup
 
-⚡ Powerup
+Provides temporary advantages when collected.
 
-Temporarily boosts player stats
+Friend
 
-👥 Friend
+Support character increasing player lives.
 
-Increases lives based on support level
+Game
 
-🎮 Game
+Coordinates gameplay, rendering, and event handling.
 
-Controls rendering, input handling, and core game logic
+Game Flow 🎮
+The player controls the Cheeseburger, avoiding enemies and collecting items.
 
-🔁 Game Flow
-Move the Cheeseburger ⬅️ ➡️ to avoid Nyan Cats and collect Power-ups.
+Power-ups and friends help maintain progress and survival.
 
-Power-ups and Friends help sustain you by offering boosts and lives.
+The game ends when all lives are lost.
 
-Survive as long as you can — the game ends when lives reach 0.
-
-Replay with a fresh state to try and beat your previous score!
+Players can restart with a fresh state to try and beat their previous score.
